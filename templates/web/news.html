@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block form_media %}
+    {{ form.media }}
+{% endblock %}
+{% block title %}
+    {{ new.title }}
+{% endblock %}
+{% block content %}
+    <div class="container news">
+        <h1 class="new-title">{{ new.title }}</h1>
+        <p class="new-date">{{ new.pub_date }}</p>
+        <img class="new-image" src="/{{ new.image }}">
+        <br>
+        {{ new.content | safe }}
+    </div>
+{% endblock %}
